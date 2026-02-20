@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Photos - Tech Academy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <img src="Images/logo.png" alt="Tech Academy" class="logo">
+      <img src="Images/mars.png" alt="Tech Academy" class="mars">
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="galerie.html" class="nav-link active">Galerie</a></li>
+        <li><a href="videos.html" class="nav-link">Vidéos</a></li>
+        <li><a href="temoignages.html" class="nav-link">Témoignages</a></li>
+        <li><a href="formateurs.html" class="nav-link">Formateurs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Header -->
+  <div class="gallery-header">
+    <h1>Galerie Photos</h1>
+    <p>Nos plus beaux moments capturés en images</p>
+  </div>
+
+  <!-- Category Filter -->
+  <div class="gallery-filter">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterPhotos('tous')">Tous</button>
+        <button class="filter-btn" onclick="filterPhotos('tech')">Tech</button>
+        <button class="filter-btn" onclick="filterPhotos('sport')">Sport</button>
+        <button class="filter-btn" onclick="filterPhotos('academique')">Académique</button>
+        <button class="filter-btn" onclick="filterPhotos('fun')">Fun</button>
+        <button class="filter-btn" onclick="filterPhotos('formateurs')">Formateurs</button>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo Grid -->
+  <div class="container">
+    <div class="photo-grid" id="photoGrid">
+      <!-- Photo 1 -->
+      <div class="photo-card" data-category="tech">
+        <img src="Images/programmation.jpg" alt="Ateliers de programmation">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Ateliers de programmation - Travail d'équipe</h3>
+            <span class="photo-category">Tech</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="photo-card" data-category="academique">
+        <img src="Images/salle.jpg" alt="Moments en classe">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Moments en classe</h3>
+            <span class="photo-category">Académique</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="photo-card" data-category="sport">
+        <img src="Images/sport1.jpg" alt="Matchs de basketball">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Matchs de basketball</h3>
+            <span class="photo-category">Sport</span>
+          </div>
+        </div>
+      </div>
+      <div class="photo-card" data-category="sport">
+        <img src="Images/entrainement.jpg" alt="Matchs de basketball">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Nos débuts</h3>
+            <span class="photo-category">Sport</span>
+          </div>
+        </div>
+      </div>
+      <div class="photo-card" data-category="sport">
+        <img src="Images/conseil.jpg" alt="Matchs de basketball">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Moments de conseil</h3>
+            <span class="photo-category">Sport</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="photo-card" data-category="academique">
+        <img src="Images/academique.jpg" alt="Sessions d'étude">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Sessions d'étude en groupe</h3>
+            <span class="photo-category">Académique</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="photo-card" data-category="fun">
+        <img src="Images/succes.jpeg" alt="Célébration">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Célébration de nos succès</h3>
+            <span class="photo-category">Fun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="photo-card" data-category="fun">
+        <img src="Images/cine.jpg" alt="Sorties cinéma">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Sorties cinéma</h3>
+            <span class="photo-category">Fun</span>
+          </div>
+        </div>
+      </div>
+      <div class="photo-card" data-category="fun">
+        <img src="Images/cine1.jpg" alt="Sorties cinéma">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Sorties cinéma</h3>
+            <span class="photo-category">Fun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="photo-card" data-category="formateurs">
+        <img src="Images/gms1.JPG" alt="Avec nos formateurs">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Avec nos formateurs</h3>
+            <span class="photo-category">Formateurs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 8 -->
+      <div class="photo-card" data-category="tech">
+        <img src="Images/prog2.JPG" alt="Projets en équipe">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Projet personnel</h3>
+            <span class="photo-category">Tech</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 9 -->
+      <div class="photo-card" data-category="tech">
+        <img src="Images/prog1.JPG" alt="Apprentissage du code">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Apprentissage du code</h3>
+            <span class="photo-category">Tech</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 10 -->
+      <div class="photo-card" data-category="academique">
+        <img src="Images/gms2.jpg" alt="Growth mindset">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Growth mindset workshops</h3>
+            <span class="photo-category">Académique</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 11 -->
+      <div class="photo-card" data-category="fun">
+        <img src="Images/fun1.png" alt="Moments de complicité">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Moments de complicité</h3>
+            <span class="photo-category">Fun</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 12 -->
+      <div class="photo-card" data-category="formateurs">
+        <img src="Images/avec_form2.jpg" alt="Apprentissage avec les formateurs">
+        <div class="photo-overlay">
+          <div class="photo-info">
+            <h3>Apprentissage avec les formateurs</h3>
+            <span class="photo-category">Formateurs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+  
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Tech Academy</h3>
+          <p>Une aventure de 4 années avec 14 étudiants passionnés</p>
+        </div>
+        <div class="footer-section">
+          <h3>Navigation</h3>
+          <a href="index.html">Accueil</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="videos.html">Vidéos</a>
+          <a href="temoignages.html">Témoignages</a>
+          <a href="formateurs.html">Formateurs</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: educ@techacademy.tech</p>
+          <p>Tél: +228 93 44 22 00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tech Academy. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterPhotos(category) {
+      const photos = document.querySelectorAll('.photo-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      // Update active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Filter photos
+      photos.forEach(photo => {
+        if (category === 'tous' || photo.dataset.category === category) {
+          photo.style.display = 'block';
+        } else {
+          photo.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
